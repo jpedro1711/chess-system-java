@@ -34,4 +34,11 @@ public class Board {
 	public Piece piece(Position position) {
 		return pieces[position.getRow()][position.getColumn()];
 	}
+	
+	public void placePiece(Piece piece, Position position) {
+		// pieces = matriz de peças do tabuleiro que foi instanciada no construtor 
+		pieces[position.getRow()][position.getColumn()] = piece;
+		// posição da peça não é mais null
+		piece.position = position;
+	}
 }
